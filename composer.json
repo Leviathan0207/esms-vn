@@ -8,5 +8,6 @@
         "psr-0": {
             "ESMS": "/src"
         }
-    }
+    },
+    "license": "MIT"
 }
