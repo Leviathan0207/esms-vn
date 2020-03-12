@@ -1,13 +1,14 @@
 {
-    "name": "quynguyen/esms-vn",
-    "description": "First package",
-    "require": {
-        "php": "^7.3"
-    },
-    "autoload": {
-        "psr-0": {
-            "ESMS": "/src"
-        }
-    },
-    "license": "MIT"
+  "name": "quynguyen/esms-vn",
+  "description": "First package",
+  "require": {
+    "php": "^7.3",
+    "guzzlehttp/guzzle": "^6.5"
+  },
+  "autoload": {
+    "psr-0": {
+      "ESMS": "/src"
+    }
+  },
+  "license": "MIT"
 }
