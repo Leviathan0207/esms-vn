@@ -4,6 +4,7 @@ namespace ESMS;
 
 use Exception;
 use GuzzleHttp\Client;
+use ESMSConstant as Constant;
 
 class EsmsProvider extends EsmsCore
 {
@@ -23,17 +24,17 @@ class EsmsProvider extends EsmsCore
         if (!$url || empty($url)) {
             $url = $this::defaultUrl;
         }
-
+        
         if ($httpMethod == $this::GET_METHOD) {
             $client = new Client([
                 'base_uri' => $url .
-                    $this::phone . $phone .
-                    $this::content . $content .
-                    $this::apiKey . $apiKey .
-                    $this::secretKey . $secretKey .
-                    $this::isUnicode . $isUnicode .
-                    $this::brandName . $brandName .
-                    $this::smsType . $smsType,
+                    Constant::phone . $phone .
+                    Constant::content . $content .
+                    Constant::apiKey . $apiKey .
+                    Constant::secretKey . $secretKey .
+                    Constant::isUnicode . $isUnicode .
+                    Constant::brandName . $brandName .
+                    Constant::smsType . $smsType
             ]);
             return $client->request($httpMethod);
         }
